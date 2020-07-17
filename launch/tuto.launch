@@ -1,0 +1,9 @@
+<launch>
+
+        <node pkg="udm_ros_tutorials" name="pub" type="publisher_clean.py"/>
+        
+        <node pkg="udm_ros_tutorials" name="sub" type="subscriber_clean.py" output="screen">
+                <remap from="subscribed_topic" to="publish_topic"/>
+        </node>
+
+</launch>
