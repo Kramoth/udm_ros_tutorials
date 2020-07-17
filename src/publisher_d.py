@@ -2,6 +2,7 @@
 import rospy
 from std_msgs.msg import String
 
+
 rospy.init_node('publisher',anonymous=True)
 pub=rospy.Publisher('publish_topic',String,queue_size=10)
 rate=rospy.Rate(10)
