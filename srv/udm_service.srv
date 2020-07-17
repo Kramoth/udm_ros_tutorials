@@ -1,0 +1,4 @@
+std_msgs/Int64 a
+---
+std_msgs/Bool res
+
