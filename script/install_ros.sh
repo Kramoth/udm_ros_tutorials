@@ -32,28 +32,24 @@ while getopts "fdbz" opt; do
 done
 
 
-# echo "$shell"
-# echo "$install"
+echo "$shell"
+echo "$install"
 if [[ "$install" = "full" ]]; then
 	echo "full"
-	sudo apt install ros-melodic-desktop-full
+	sudo apt -y install ros-melodic-desktop-full
 elif [[ "$install" = "desktop" ]];then
 	echo "desktop"
-	sudo apt install ros-melodic-desktop
+	sudo apt -y install ros-melodic-desktop
 elif [[ "$install" = "bare" ]]; then
 	echo "bare"
-	sudo apt install ros-melodic-ros-base
+	sudo apt -y install ros-melodic-ros-base
 fi
 
-if [[ "$shell"="sh" ]]; then
-	echo "sh"
+if [[ "$shell" = "sh" ]]; then
 	echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
-	source ~/.bashrc
-elif [[ "$shell"="zsh"  ]]; then
+elif [[ "$shell" = "zsh"  ]]; then
 	echo "source /opt/ros/melodic/setup.zsh" >> ~/.zshrc
-	source ~/.zshrc
 fi
-
 sudo apt -y install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential
 sudo apt -y install python-rosdep
 
