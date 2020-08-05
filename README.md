@@ -21,6 +21,7 @@ source devel/setup.bash
 Pour excuter les noeuds, il y a plusieurs facon de proceder:
 
 # rosrun
+Ouvrez un premier terminal et lancer le roscore.
 
 Ouvrez deux terminaux sourcer le devel/setup.bash qui se situe dans le dossier catkin_ws dans chaque terminal.
 
