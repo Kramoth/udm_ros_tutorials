@@ -6,7 +6,7 @@ from udm_ros_tutorials.msg import udm_custom_message
 
 def talker():
 	rospy.init_node('publisher',anonymous=True)
-	pub=rospy.Publisher('publish_topic',udm_custom_message,queue_size=10)
+	pub=rospy.Publisher('published_topic',udm_custom_message,queue_size=10)
 	rate=rospy.Rate(10)
 	while not rospy.is_shutdown():
 		message=udm_custom_message()

@@ -6,7 +6,7 @@ from std_msgs.msg import String
 class talker:
     def __init__(self):
         rospy.init_node('publisher',anonymous=True)
-        self.pub=rospy.Publisher('publish_topic',String,queue_size=10)
+        self.pub=rospy.Publisher('published_topic',String,queue_size=10)
         self.rate=rospy.Rate(10)
 
     def run(self):
